@@ -763,7 +763,7 @@ export class PluginsService {
           return withoutV
         }
       } catch (e) {
-        this.logger.error(`Failed to check for bundled update as ${e.message}.`)
+        this.logger.error(`Failed to check for bundled update: ${e.message}.`)
         return ''
       }
     } else {
