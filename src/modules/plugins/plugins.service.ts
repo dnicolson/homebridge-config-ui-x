@@ -750,7 +750,7 @@ export class PluginsService {
         '/var/packages/homebridge/target/app/lib/node_modules',
       ].includes(dirname(process.env.UIX_BASE_PATH))
       && pluginAction.name === this.configService.name
-      && pluginAction.version !== 'latest'
+      && !['latest', 'beta'].includes(pluginAction.version)
     ) {
       try {
         try {
